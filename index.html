@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+   border:1px solid black;
+   background-color:beige;
+ }
+     </style>
+</head>
+<body>
+    
+
+  <body>
+    
+
+        
+        <h1> Kişiye özel Tişört Sipariş Aracı</h1>
+        <hr>
+        <p>Lütfen oluşturmak istediğiniz siparişe ilişkin aşağıdaki bilgileri doldurunuz</p>
+        <h3>Kişisel Bilgiler</h3>
+        <label for="ad">Adınız:</label> 
+            <input type="text" name="ad" id="ad"> <br> <br>
+            Soyadınız:
+            <input type="text" name="soy" id="soyad"> <br> <br>
+           Doğum tarihiniz
+            <input type="date" name="doğ" id="tarih"> <br> <br>
+            Mail:
+            <input type="text" name="mail" id="mail"> <br> <br>
+            Telefon:
+            <input type="tel" name="tel" id="tel"> <br> <br>
+                <hr>
+
+            <h3> Sipariş Bilgileri</h3> <br>  <br>
+            Tişört rengi :
+            <input type="color" name="tişört" id="trenk"> <br> <br>
+           Yazı rengi :
+            <input type="color" name="tişört" id="yrenk"> <br> <br>
+            Tişört üzerine Yazılacak Yazıyı girin:
+            <input type="text" name="yazı" id="yazi"> <br> <br>
+            Tişört Adedi:
+            <input type="number" name="adet" id="adet"> <br> <br>
+            Beden Seçiniz:
+            <input type="range" name="range" id="beden"> <br> <br>
+
+            <br>
+            <h3>Teslimat Bilgileri </h3>
+            Adres:
+            <input type="text" name="adres" id="adres"> <br> <br>
+            Teslim  tarihiniz
+            <input type="date" name="ttarih" id="ttarih"> <br> <br>
+
+            <hr>
+            <h3>Ödeme Bilgileri </h3> 
+            Ad Soyad:
+            <input type="text" name="adsoy" id="adsoy"> <br> <br>
+            Kart Numarası:
+            <input type= "text" name="kartad" id="kartno"> <br> <br>
+            Doğum tarihiniz
+            <input type="date" name="sonkullanma" id="skullanma"> <br> <br>
+            Cvv:
+            <input type="number" name="cvv" id="cvv"> <br> <br>
+            <button type="submit"  onclick="yakala()" >Onayla</button>
+
+
+             <table >
+               
+            </table>
+    
+    
+    
+    
+        <script>
+            const table = document.querySelector("table");
+            function yakala() {
+               
+                var ad=document.getElementById("ad").value;
+                var soyad=document.getElementById("soyad").value;
+                var tarih=document.getElementById("tarih").value;
+                var mail=document.getElementById("mail").value;
+                var tel=document.getElementById("tel").value;
+                var trenk=document.getElementById("trenk").value;
+                var yrenk=document.getElementById("yrenk").value;
+                var yazi=document.getElementById("yazi").value;
+                var adet=document.getElementById("adet").value;
+                var beden=document.getElementById("beden").value;
+                var adres=document.getElementById("adres").value;
+                var ttarih=document.getElementById("ttarih").value;
+                var adsoy=document.getElementById("adsoy").value;
+                var kartno=document.getElementById("kartno").value;
+                var skullanma=document.getElementById("skullanma").value;
+                var cvv=document.getElementById("cvv").value;
+    
+
+
+
+
+
+                table.innerHTML= ` <tr>
+      <th colspan="3">SİPARİŞ ONAY</th>
+  </tr>
+  
+  <tr>
+      <th rowspan="5">Kişisel Bilgiler</th>
+      <td>Ad:</td>
+      <td>${ad}</td>
+      
+  </tr>
+  <tr>
+    <td>Soyad:</td>
+    <td>${soyad}</td>
+  </tr>
+  
+  <tr>
+    <td>Doğum Tarihi:</td>
+    <td>${tarih}</td>
+  </tr>
+  <tr>
+    <td>Mail Adresi:</td>
+    <td>${mail}</td>
+
+  </tr>
+
+  <tr>
+    <td>Telefon:</td>
+    <td>${tel}</td>
+  </tr>
+
+  <tr>
+      <th rowspan="5">Sipariş Bilgileri</th>
+      <td>Tişört Rengi:</td>
+      <td>${trenk}</td>
+      
+  </tr>
+  
+   <tr>
+      <td>Yazı Rengi</td>
+      <td>${yrenk}</td>
+  </tr>
+  
+  <tr>
+      <td>Yazı:</td>
+      <td>${yazi}</td>
+  </tr>
+  
+  <tr>
+      <td>Tişört Adedi:</td>
+      <td>${adet}</td>
+      
+  </tr>
+  
+  <tr>
+      <td>Tişört Bedeni</td>
+      <td>${beden}</td>
+      
+  </tr> 
+  
+  <tr>
+      <th rowspan="2">Teslimat Bilgileri</th>
+      <td>Adres:</td>
+      <td>${adres}</td>
+  </tr>
+  
+  <tr>
+      <td>Teslim Tarihi</td>
+      <td>${ttarih}</td>
+  </tr>
+  <tr>
+    <th rowspan="4" > Ödeme Bilgileri</th>
+    <td>Ad Soyad:</td>
+    <td>${adsoy}</td>
+
+  </tr>
+
+  <tr>
+    <td>Kart Numarası:</td>
+    <td>${kartno}</td>
+  </tr>
+
+  <tr>
+    <td>Son Kullanma Tarihi:</td>
+    <td>${skullanma}</td>
+  </tr>
+  <tr>
+    <td>CVV:</td>
+    <td>${cvv}</td>
+  </tr>
+  
+  `
+
+
+
+
+                };
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
